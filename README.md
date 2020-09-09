@@ -9,4 +9,5 @@ Import the Module like this in your NodeJS project:
 and use it like this:
 
 ``> happybytes(85869345)
+
 < [String: '85.87MB'] ``
