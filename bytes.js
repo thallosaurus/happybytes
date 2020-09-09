@@ -5,7 +5,7 @@
  * @param {boolean} [useMiB=false] If true, uses a base of 1024 (KB, GB...) instead of 1000 (KiB, GiB...)
  * @returns String
  */
-function sizeAsString(size = 0, useMiB = false)
+function happybytes(size = 0, useMiB = false)
 {
     let unit = [
         ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"],
@@ -25,4 +25,4 @@ function sizeAsString(size = 0, useMiB = false)
     return new String(Math.round((size * 100)) / 100 + unit[useMiB ? 0 : 1][c]);
 }
 
-module.exports = sizeAsString;
+module.exports = happybytes;
