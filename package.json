@@ -1,6 +1,6 @@
 {
   "name": "happybytes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small module to convert bytes to their units",
   "main": "happybytes.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thallosaurus/npm-happybytes.git"
+    "url": "git+https://github.com/thallosaurus/happybytes.git"
   },
   "keywords": [
     "happy",
