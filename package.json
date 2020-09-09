@@ -1,0 +1,28 @@
+{
+  "name": "npm-happybytes",
+  "version": "1.0.0",
+  "description": "A small module to convert bytes to their units",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thallosaurus/npm-happybytes.git"
+  },
+  "keywords": [
+    "happy",
+    "bytes",
+    "kb",
+    "gb",
+    "mb",
+    "eb",
+    "tb"
+  ],
+  "author": "thallosaurus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thallosaurus/npm-happybytes/issues"
+  },
+  "homepage": "https://github.com/thallosaurus/npm-happybytes#readme"
+}
