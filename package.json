@@ -1,6 +1,6 @@
 {
   "name": "happybytes",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "A small module to convert bytes to their units",
   "main": "happybytes.js",
   "scripts": {
@@ -20,9 +20,9 @@
     "tb"
   ],
   "author": "thallosaurus",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thallosaurus/npm-happybytes/issues"
+    "url": "https://github.com/thallosaurus/happybytes/issues"
   },
-  "homepage": "https://github.com/thallosaurus/npm-happybytes#readme"
+  "homepage": "https://github.com/thallosaurus/happybytes#readme"
 }
