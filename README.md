@@ -1,4 +1,4 @@
-# npm-bytes-as-string
+# npm-happybytes
 
 ## How to use?
 
