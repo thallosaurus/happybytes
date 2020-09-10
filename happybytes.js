@@ -7,6 +7,8 @@
  */
 function hb(size = 0, useMiB = false)
 {
+    if (size <= -1) throw new Error("Negative Bytes are not allowed!");
+    
     let unit = [
         ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"],
         ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
