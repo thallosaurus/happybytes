@@ -3,9 +3,15 @@
 ## How to use?
 
 Install it like any other nodeJS module:
+
 ``npm i happybytes``
 
-Import the Module like this in your NodeJS project:
+Or include it in your Website:
+
+``<script src="happybytes.js"></script>``
+
+
+Import the Module like this in your NodeJS project (Only needed, if you use it with NodeJS):
 
 ``const happybytes = require("happybytes"); ``
 
@@ -20,3 +26,7 @@ Default mode defines a Decimal Base. If you want to use the binary base, just pa
 ``> happybytes(493764, true);``
 
 ``< 482.19KiB``
+
+## Cross Platform Compatibility
+
+Since this small module was designed for use everywhere, you can use it anywhere you can use ES6 JavaScript. Syntax stays the same everywhere.
