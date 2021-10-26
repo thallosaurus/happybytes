@@ -6,23 +6,10 @@ name: Node.js Package
 on:
   push:
     tags:
-      - '*'
+      - '[RELEASE] v*'
 
 jobs:
-  version:
-    runs-on: ubuntu-latest
-#    if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-      - run: git config --global user.name 'Thallosaurus Release Bot'
-      - run: git config --global user.email 'noemail@thallosaurus.de'
-      - run: npm version patch -m "[PUBLISH] Releasing %s to NPM"
-      - run: git push
-
   build:
-    needs: version
     runs-on: ubuntu-latest
 #    if: "startsWith(github.event.head_commit.message, '[PUBLISH]')"
     steps:
