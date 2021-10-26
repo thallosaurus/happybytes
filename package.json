@@ -1,6 +1,6 @@
 {
   "name": "happybytes",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A small module to convert bytes to their units",
   "main": "happybytes.js",
   "scripts": {
