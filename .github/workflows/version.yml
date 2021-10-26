@@ -16,4 +16,5 @@ jobs:
       - run: git config --global user.name 'Thallosaurus Release Bot'
       - run: git config --global user.email 'noemail@thallosaurus.de'
       - run: npm version patch -m "[PUBLISH] Releasing %s to NPM"
+      - run: git push
       - run: git push --tags
