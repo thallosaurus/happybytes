@@ -33,3 +33,7 @@ Default mode defines a Decimal Base. If you want to use the binary base, just pa
 ## Cross Platform Compatibility
 
 Since this small module was designed for use everywhere, you can use it anywhere you can use ES6 JavaScript. Syntax stays the same everywhere.
+
+## CI
+
+The CI will push to NPM if the commit starts with \[RELEASE\]
