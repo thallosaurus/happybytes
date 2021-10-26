@@ -12,20 +12,20 @@ describe("Exported module is a JS Function", function() {
 describe("Function Returns A String", function() {
     it("checks if the module will return a string", function() {
         expect(hb("1234")).toBeInstanceOf(String);
-    })
+    });
 });
 
 describe("General Function", function() {
     it("does it return correctly", function() {
         expect(hb(bytes)).toBe('534.59kB');
-    })
-})
+    });
+});
 
 describe("SI Values", function() {
     it("what about base 10 numbers?", function() {
         expect(hb(bytes, true)).toBe("522.06KiB");
-    })
-})
+    });
+});
 
 
 describe("NegativeBytes", function() {
