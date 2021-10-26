@@ -10,6 +10,9 @@ Or include it in your Website:
 
 ``<script src="happybytes.js"></script>``
 
+If space is critical, you can also use unpkg.com to include the script in your website:
+``<script src="https://unpkg.com/happybytes/happybytes.js"></script>``
+
 
 Import the Module like this in your NodeJS project (Only needed, if you use it with NodeJS):
 

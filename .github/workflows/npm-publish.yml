@@ -7,12 +7,23 @@ on:
   push:
     branches: 
       - master
-  release:
-    types: [created]
 
 jobs:
+  version:
+    runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+      - run: git config --global user.name 'Thallosaurus Release Bot'
+      - run: git config --global user.email 'noemail@thallosaurus.de'
+      - run: npm version patch -m "[RELEASE] %s"
+      - run: git push
+
   build:
     runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -25,6 +36,7 @@ jobs:
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
+    if: "!startsWith(github.event.head_commit.message, '[RELEASE]')"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
