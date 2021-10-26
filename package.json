@@ -1,6 +1,6 @@
 {
   "name": "happybytes",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "A small module to convert bytes to their next whole-units. Works in browser and node",
   "main": "happybytes.js",
   "scripts": {
