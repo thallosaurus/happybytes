@@ -5,13 +5,13 @@ name: Node.js Package
 
 on:
   push:
-    branches: 
-      - master
+    tags:
+      - '*'
 
 jobs:
   version:
     runs-on: ubuntu-latest
-    if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
+#    if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
     steps:
       - uses: actions/checkout@v2
         with:
@@ -24,7 +24,7 @@ jobs:
   build:
     needs: version
     runs-on: ubuntu-latest
-    if: "startsWith(github.event.head_commit.message, '[PUBLISH]')"
+#    if: "startsWith(github.event.head_commit.message, '[PUBLISH]')"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
