@@ -18,13 +18,13 @@ jobs:
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - run: git config --global user.name 'Thallosaurus Release Bot'
       - run: git config --global user.email 'noemail@thallosaurus.de'
-      - run: npm version patch -m "[RELEASE] %s"
+      - run: npm version patch -m "[BOT][RELEASE] %s"
       - run: git push
 
   build:
     needs: version
     runs-on: ubuntu-latest
-    if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
+    if: "startsWith(github.event.head_commit.message, '[BOT][RELEASE]')"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -37,7 +37,7 @@ jobs:
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
-    if: "startsWith(github.event.head_commit.message, '[RELEASE]')"
+    if: "startsWith(github.event.head_commit.message, '[BOT][RELEASE]')"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
