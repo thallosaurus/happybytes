@@ -1,10 +1,10 @@
 {
   "name": "happybytes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A small module to convert bytes to their units",
   "main": "happybytes.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "npx jasmine"
   },
   "repository": {
     "type": "git",
