@@ -3,16 +3,18 @@
  *
  * @param {number} [size=0] Filesize in Bytes
  * @param {boolean} [useMiB=false] If true, uses a base of 1024 (KB, GB...) instead of 1000 (KiB, GiB...)
- * @returns String
+ * @returns String Size as string
  */
-function hb(size = 0, useMiB = false)
+module.exports = function(size = 0, useMiB = false)
 {    
-    let unit = [
+    if (size === null) throw new Error("null as size is not allowed");
+
+    const unit = [
         ["B", "KiB", "MiB", "GiB", "TiB", "PiB", "EiB", "ZiB", "YiB"],
-        ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
+        ["B", "kB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
     ][useMiB ? 0 : 1];
 
-    let base = useMiB ? 1024 : 1000;
+    const base = useMiB ? 1024 : 1000;
     let c = 0;
     do {
         size /= base;
@@ -25,5 +27,3 @@ function hb(size = 0, useMiB = false)
 
     return String(Math.floor(Math.round((size * 100))) / 100 + unit[c]);
 }
-
-module.exports = hb;
