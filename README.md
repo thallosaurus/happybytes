@@ -36,4 +36,4 @@ Since this small module was designed for use everywhere, you can use it anywhere
 
 ## CI
 
-The CI will push to NPM if the commit starts with \[RELEASE\]
+The CI will push to NPM if the commit starts with \[RELEASE\]. Will commit as "Thallosaurus Release Bot"
