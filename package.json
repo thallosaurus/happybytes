@@ -1,7 +1,7 @@
 {
   "name": "happybytes",
   "version": "0.0.21",
-  "description": "A small module to convert bytes to their units",
+  "description": "A small module to convert bytes to their next whole-units. Works in browser and node",
   "main": "happybytes.js",
   "scripts": {
     "test": "npx jasmine"
@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/thallosaurus/happybytes/issues"
   },
-  "homepage": "https://github.com/thallosaurus/happybytes#readme"
+  "homepage": "https://github.com/thallosaurus/happybytes#readme",
+  "devDependencies": {
+    "jasmine": "^3.10.0"
+  }
 }
